@@ -26,45 +26,46 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="section-spacing bg-brand-light relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-10 right-10 w-48 h-48 bg-brand-coral/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-10 left-10 w-64 h-64 bg-brand-yellow/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+    <section id="testimonials" className="section-spacing bg-gradient-to-b from-gray-50/50 to-white relative overflow-hidden">
+      {/* Premium decorative background elements */}
+      <div className="absolute top-10 right-10 w-[400px] h-[400px] bg-brand-coral/15 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-10 left-10 w-[450px] h-[450px] bg-brand-yellow/15 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
       
-      <div className="container-custom relative">
-        <div className="text-center mb-16">
-          <h2 className="text-heading text-brand-black mb-4">Client words</h2>
+      <div className="container-custom relative z-10">
+        <div className="text-center mb-20">
+          <p className="text-sm font-bold text-brand-coral mb-4 tracking-wider uppercase">Testimonials</p>
+          <h2 className="text-heading text-brand-black mb-6 font-bold">Client words</h2>
         </div>
         
-        <div className="max-w-3xl mx-auto relative min-h-[200px] flex items-center justify-center">
+        <div className="max-w-4xl mx-auto relative min-h-[280px] flex items-center justify-center">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 ${
+              className={`absolute inset-0 flex flex-col items-center justify-center text-center px-8 transition-all duration-700 ${
                 index === activeIndex 
-                  ? "opacity-100 translate-y-0" 
-                  : "opacity-0 translate-y-4 pointer-events-none"
+                  ? "opacity-100 translate-y-0 scale-100" 
+                  : "opacity-0 translate-y-8 scale-95 pointer-events-none"
               }`}
             >
-              <blockquote className="text-subheading text-brand-black mb-6 italic">
+              <blockquote className="text-subheading text-brand-black mb-8 italic font-medium leading-relaxed">
                 "{testimonial.quote}"
               </blockquote>
-              <p className="text-brand-gray font-medium">
+              <p className="text-brand-gray font-semibold text-lg">
                 {testimonial.author}
               </p>
             </div>
           ))}
         </div>
         
-        <div className="flex justify-center gap-2 mt-12">
+        <div className="flex justify-center gap-3 mt-16">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              className={`h-2.5 rounded-full transition-all duration-500 ${
                 index === activeIndex 
-                  ? "bg-brand-coral w-8" 
-                  : "bg-brand-black/20 hover:bg-brand-black/40"
+                  ? "bg-brand-coral w-10 shadow-lg" 
+                  : "bg-brand-black/20 hover:bg-brand-black/40 w-2.5"
               }`}
               aria-label={`View testimonial ${index + 1}`}
             />

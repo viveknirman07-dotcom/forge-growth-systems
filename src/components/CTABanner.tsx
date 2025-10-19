@@ -41,7 +41,7 @@ const CTABanner = () => {
             />
             <text fontSize="9" fill="hsl(var(--brand-coral))">
               <textPath href="#circlePath" startOffset="0%">
-                • contact us • hello@bitwellforge.com •
+                • contact us • bitwellforge@gmail.com •
               </textPath>
             </text>
           </svg>

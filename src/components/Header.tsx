@@ -15,8 +15,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-brand-white/95 backdrop-blur-lg shadow-md" : "bg-brand-white/80 backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "bg-white/98 backdrop-blur-xl shadow-lg" : "bg-white/80 backdrop-blur-md"
       }`}
     >
       <div className="container-custom">
@@ -25,25 +25,25 @@ const Header = () => {
             <img
               src={logo}
               alt="Bitwellforge"
-              className="h-7 w-7 transition-transform duration-300 group-hover:rotate-12"
+              className="h-8 w-8 transition-transform duration-500 group-hover:rotate-180"
             />
-            <span className="text-brand-black font-semibold text-lg">Bitwellforge</span>
+            <span className="text-brand-black font-bold text-lg">Bitwellforge</span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#whatwedo" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
+          <nav className="hidden md:flex items-center gap-10">
+            <a href="#whatwedo" className="text-brand-gray hover:text-brand-black transition-all duration-300 text-sm font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-coral after:transition-all after:duration-300 hover:after:w-full">
               About
             </a>
-            <a href="#services" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
+            <a href="#services" className="text-brand-gray hover:text-brand-black transition-all duration-300 text-sm font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-coral after:transition-all after:duration-300 hover:after:w-full">
               Services
             </a>
-            <a href="#approach" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
+            <a href="#approach" className="text-brand-gray hover:text-brand-black transition-all duration-300 text-sm font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-coral after:transition-all after:duration-300 hover:after:w-full">
               Process
             </a>
-            <a href="#testimonials" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
+            <a href="#testimonials" className="text-brand-gray hover:text-brand-black transition-all duration-300 text-sm font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-coral after:transition-all after:duration-300 hover:after:w-full">
               Testimonials
             </a>
-            <a href="#contact" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
+            <a href="#contact" className="text-brand-gray hover:text-brand-black transition-all duration-300 text-sm font-semibold relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-brand-coral after:transition-all after:duration-300 hover:after:w-full">
               Contact
             </a>
           </nav>
@@ -52,7 +52,7 @@ const Header = () => {
             href="https://www.instagram.com/bitwellforge/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brand-gray hover:text-brand-black transition-colors"
+            className="text-brand-gray hover:text-brand-coral transition-all duration-300 hover:scale-110"
             aria-label="Instagram"
           >
             <Instagram className="h-5 w-5" />
