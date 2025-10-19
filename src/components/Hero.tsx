@@ -24,34 +24,39 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50/30">
-      {/* Premium geometric background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large ambient glows */}
-        <div className="absolute top-20 right-[10%] w-[600px] h-[600px] bg-brand-yellow/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 left-[5%] w-[700px] h-[700px] bg-brand-coral/15 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute top-1/2 right-[30%] w-[500px] h-[500px] bg-brand-mint/15 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
-        
-        {/* Decorative geometric shapes */}
-        <div className="absolute top-32 left-[15%] w-40 h-40 border-2 border-brand-coral/20 rounded-full"></div>
-        <div className="absolute bottom-32 right-[12%] w-32 h-32 bg-brand-orange/10 rotate-45 rounded-2xl"></div>
-        <div className="absolute top-1/3 right-[8%] w-24 h-24 border-2 border-brand-mint/30 rounded-full"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-black">
+      {/* Background Effects */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute inset-0" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}></div>
+      </div>
+      
+      <div 
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[38vw] h-[38vw] rounded-full blur-[100px] opacity-22"
+        style={{ background: "radial-gradient(circle, hsl(var(--brand-yellow)) 0%, transparent 70%)" }}
+      ></div>
+
+      {/* Floating Particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-brand-yellow rounded-full animate-float opacity-40"></div>
+        <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-brand-yellow rounded-full animate-float opacity-30" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-brand-yellow rounded-full animate-float opacity-50" style={{ animationDelay: "2s" }}></div>
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 text-center pt-32 px-6">
+      <div className="container-custom relative z-10 text-center pt-20">
         <img
           ref={logoRef}
           src={logo}
           alt="Bitwellforge Logo"
-          className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-12 cursor-pointer opacity-0"
+          className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-8 cursor-pointer opacity-0"
           onClick={handleLogoPunch}
-          style={{ filter: "drop-shadow(0 4px 24px rgba(255, 107, 90, 0.25))" }}
+          style={{ filter: "drop-shadow(0 0 20px rgba(255, 215, 102, 0.4))" }}
         />
         
         <h1 
-          className="text-display text-brand-black mb-8 animate-fade-in-up font-bold tracking-tight"
+          className="text-display text-brand-white mb-6 animate-fade-in-up"
           style={{ 
+            textShadow: "var(--shadow-text)",
             animationDelay: "100ms",
             opacity: 0,
             animationFillMode: "forwards"
@@ -61,8 +66,9 @@ const Hero = () => {
         </h1>
         
         <p 
-          className="text-subheading text-brand-gray mb-16 max-w-3xl mx-auto animate-fade-in-up leading-relaxed"
+          className="text-subheading text-brand-white/90 mb-12 max-w-3xl mx-auto animate-fade-in-up"
           style={{ 
+            textShadow: "var(--shadow-text)",
             animationDelay: "200ms",
             opacity: 0,
             animationFillMode: "forwards"
@@ -72,7 +78,7 @@ const Hero = () => {
         </p>
 
         <div 
-          className="flex flex-col sm:flex-row gap-5 justify-center items-center animate-fade-in-up"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
           style={{ 
             animationDelay: "300ms",
             opacity: 0,
@@ -82,7 +88,8 @@ const Hero = () => {
           <Button 
             asChild
             size="lg"
-            className="bg-brand-black text-brand-white hover:bg-brand-black/90 font-semibold px-12 py-7 text-base rounded-full transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl shadow-xl"
+            className="bg-brand-yellow text-brand-black hover:bg-brand-yellow-soft font-semibold px-8 py-6 text-base rounded-[10px] transition-all duration-300 hover:-translate-y-0.5"
+            style={{ boxShadow: "var(--shadow-yellow)" }}
           >
             <a href="mailto:bitwellforge@gmail.com?subject=Growth%20Audit%20Request">
               Start Your Growth Audit
@@ -93,14 +100,14 @@ const Hero = () => {
             asChild
             variant="outline"
             size="lg"
-            className="bg-white/50 backdrop-blur-sm text-brand-black border-2 border-brand-black/15 hover:bg-white hover:border-brand-black/30 px-12 py-7 text-base rounded-full transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+            className="bg-transparent text-brand-white border-white/20 hover:bg-white/10 px-8 py-6 text-base rounded-[10px] transition-all duration-300"
           >
             <a href="#services">Our Services</a>
           </Button>
         </div>
 
         <p 
-          className="text-sm text-brand-gray mt-12 animate-fade-in-up font-medium"
+          className="text-sm text-brand-muted mt-8 animate-fade-in-up"
           style={{ 
             animationDelay: "400ms",
             opacity: 0,

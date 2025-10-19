@@ -49,14 +49,11 @@ export default {
         },
         brand: {
           black: "hsl(var(--brand-black))",
+          surface: "hsl(var(--brand-surface))",
           white: "hsl(var(--brand-white))",
-          gray: "hsl(var(--brand-gray))",
-          light: "hsl(var(--brand-light))",
-          coral: "hsl(var(--brand-coral))",
+          muted: "hsl(var(--brand-muted))",
           yellow: "hsl(var(--brand-yellow))",
-          mint: "hsl(var(--brand-mint))",
-          orange: "hsl(var(--brand-orange))",
-          blue: "hsl(var(--brand-blue))",
+          "yellow-soft": "hsl(var(--brand-yellow-soft))",
         },
       },
       borderRadius: {

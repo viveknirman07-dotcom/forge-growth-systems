@@ -14,37 +14,31 @@ const steps = [
 ];
 
 const Approach = () => {
-  const colors = ['brand-coral', 'brand-yellow', 'brand-mint'];
-  
   return (
-    <section id="approach" className="section-spacing bg-gradient-to-b from-white to-gray-50/50 relative overflow-hidden">
-      {/* Premium decorative background shapes */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-yellow/15 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-brand-coral/15 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-      
-      <div className="container-custom relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <p className="text-sm font-bold text-brand-coral mb-4 tracking-wider uppercase">Our Process</p>
-          <h2 className="text-heading text-brand-black mb-6 font-bold">Discovery. Design. Build.</h2>
-          <p className="text-body text-brand-gray text-lg leading-relaxed">
-            Our systematic process transforms insights into measurable results.
-          </p>
+    <section id="approach" className="section-spacing-compact bg-brand-white">
+      <div className="container-custom">
+        <div className="text-center mb-16">
+          <h2 className="text-heading text-brand-black mb-4">Discovery. Design. Build.</h2>
         </div>
-
-        <div className="relative max-w-6xl mx-auto">
-          {/* Premium timeline connector with gradient */}
-          <div className="absolute top-16 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-coral via-brand-yellow to-brand-mint hidden md:block rounded-full shadow-sm"></div>
+        
+        <div className="relative max-w-4xl mx-auto">
+          {/* Timeline connector */}
+          <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-brand-yellow/30"></div>
           
-          <div className="grid md:grid-cols-3 gap-16">
+          <div className="grid md:grid-cols-3 gap-8 relative">
             {steps.map((step, index) => (
-              <div key={index} className="relative text-center group">
-                {/* Enhanced step number circle */}
-                <div className={`w-32 h-32 mx-auto mb-8 rounded-full bg-${colors[index]} flex items-center justify-center relative z-10 shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:shadow-3xl`}>
-                  <span className="text-4xl font-bold text-brand-white">{index + 1}</span>
+              <div key={index} className="relative text-center">
+                {/* Number circle */}
+                <div className="w-16 h-16 rounded-full bg-brand-yellow text-brand-black font-bold text-2xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg">
+                  {index + 1}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-brand-black mb-4 leading-tight">{step.title}</h3>
-                <p className="text-brand-gray text-base leading-relaxed max-w-xs mx-auto">{step.desc}</p>
+                <h3 className="text-xl font-semibold text-brand-black mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-brand-muted text-sm leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>

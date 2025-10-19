@@ -26,37 +26,18 @@ const CTABanner = () => {
 
   return (
     <section id="contact" className="section-spacing bg-brand-black relative overflow-hidden">
-      {/* Decorative shapes */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-coral/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-yellow/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-      
-      {/* Rotating circular badge (inspired by Studio Graphene) */}
-      <div className="absolute top-20 right-20 hidden lg:block">
-        <div className="relative w-32 h-32 animate-spin" style={{ animationDuration: "15s" }}>
-          <svg viewBox="0 0 100 100" className="w-full h-full">
-            <path
-              id="circlePath"
-              d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-              fill="none"
-            />
-            <text fontSize="9" fill="hsl(var(--brand-coral))">
-              <textPath href="#circlePath" startOffset="0%">
-                • contact us • bitwellforge@gmail.com •
-              </textPath>
-            </text>
-          </svg>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-12 h-12 bg-brand-coral rounded-full"></div>
-          </div>
-        </div>
-      </div>
+      {/* Yellow glow */}
+      <div 
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[50vw] h-[50vw] rounded-full blur-[120px] opacity-20"
+        style={{ background: "radial-gradient(circle, hsl(var(--brand-yellow)) 0%, transparent 70%)" }}
+      ></div>
 
       <div className="container-custom relative z-10">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="text-heading text-brand-white mb-4">
             We're looking forward to meeting you
           </h2>
-          <p className="text-body text-brand-gray mb-8">
+          <p className="text-body text-brand-muted mb-8">
             Start with a simple audit. No pitch — just clarity.
           </p>
           
@@ -64,7 +45,8 @@ const CTABanner = () => {
             <Button 
               asChild
               size="lg"
-              className="bg-brand-coral text-brand-white hover:bg-brand-coral/90 font-semibold px-10 rounded-full shadow-xl"
+              className="bg-brand-yellow text-brand-black hover:bg-brand-yellow-soft font-semibold px-8 rounded-[10px]"
+              style={{ boxShadow: "var(--shadow-yellow)" }}
             >
               <a href="mailto:bitwellforge@gmail.com?subject=Growth%20Audit%20Request">
                 Start Your Growth Audit
@@ -75,7 +57,7 @@ const CTABanner = () => {
               asChild
               variant="outline"
               size="lg"
-              className="bg-transparent text-brand-white border-white/20 hover:bg-white/10 px-10 rounded-full"
+              className="bg-transparent text-brand-white border-white/20 hover:bg-white/10 rounded-[10px]"
             >
               <a href="https://www.instagram.com/bitwellforge/" target="_blank" rel="noopener noreferrer">
                 Instagram
@@ -91,7 +73,7 @@ const CTABanner = () => {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
-            className="bg-white/5 border-white/10 text-brand-white placeholder:text-brand-gray rounded-xl"
+            className="bg-white/5 border-white/10 text-brand-white placeholder:text-brand-muted"
           />
           
           <Input
@@ -100,7 +82,7 @@ const CTABanner = () => {
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             required
-            className="bg-white/5 border-white/10 text-brand-white placeholder:text-brand-gray rounded-xl"
+            className="bg-white/5 border-white/10 text-brand-white placeholder:text-brand-muted"
           />
           
           <Input
@@ -108,7 +90,7 @@ const CTABanner = () => {
             placeholder="Profession / Company"
             value={formData.company}
             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-            className="bg-white/5 border-white/10 text-brand-white placeholder:text-brand-gray rounded-xl"
+            className="bg-white/5 border-white/10 text-brand-white placeholder:text-brand-muted"
           />
           
           <Textarea
@@ -117,12 +99,12 @@ const CTABanner = () => {
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             required
             rows={5}
-            className="bg-white/5 border-white/10 text-brand-white placeholder:text-brand-gray resize-none rounded-xl"
+            className="bg-white/5 border-white/10 text-brand-white placeholder:text-brand-muted resize-none"
           />
           
           <Button 
             type="submit"
-            className="w-full bg-brand-coral text-brand-white hover:bg-brand-coral/90 font-semibold rounded-full shadow-lg py-6"
+            className="w-full bg-brand-yellow text-brand-black hover:bg-brand-yellow-soft font-semibold"
           >
             Send Message
           </Button>

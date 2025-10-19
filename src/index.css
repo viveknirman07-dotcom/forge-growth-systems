@@ -8,18 +8,13 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Studio Graphene-inspired Brand Colors */
-    --brand-black: 0 0% 7%;           /* #111111 - Deep black */
+    /* Bitwellforge Brand Colors - Premium Black & Yellow */
+    --brand-black: 0 0% 4%;           /* #0A0A0A */
+    --brand-surface: 0 0% 7%;         /* #111111 */
     --brand-white: 0 0% 100%;         /* #FFFFFF */
-    --brand-gray: 210 4% 62%;         /* #9AA0A6 - Text gray */
-    --brand-light: 0 0% 97%;          /* #F7F7F7 - Light background */
-    
-    /* Vibrant accent colors */
-    --brand-coral: 9 100% 66%;        /* #FF6B5A - Coral/red accent */
-    --brand-yellow: 42 100% 62%;      /* #FFBC42 - Yellow accent */
-    --brand-mint: 172 45% 77%;        /* #A8E6CE - Mint accent */
-    --brand-orange: 28 100% 60%;      /* #FF8533 - Orange accent */
-    --brand-blue: 210 50% 50%;        /* #4080BF - Blue accent */
+    --brand-muted: 210 4% 62%;        /* #9AA0A6 */
+    --brand-yellow: 45 100% 70%;      /* #FFD766 */
+    --brand-yellow-soft: 45 100% 77%; /* #FFE58A */
     
     /* Semantic Tokens */
     --background: var(--brand-white);
@@ -34,13 +29,13 @@ All colors MUST be HSL.
     --primary: var(--brand-black);
     --primary-foreground: var(--brand-white);
     
-    --secondary: var(--brand-coral);
-    --secondary-foreground: var(--brand-white);
+    --secondary: var(--brand-yellow);
+    --secondary-foreground: var(--brand-black);
     
-    --muted: var(--brand-light);
-    --muted-foreground: var(--brand-gray);
+    --muted: 0 0% 96%;
+    --muted-foreground: var(--brand-muted);
     
-    --accent: var(--brand-yellow);
+    --accent: var(--brand-yellow-soft);
     --accent-foreground: var(--brand-black);
     
     --destructive: 0 84% 60%;
@@ -48,22 +43,21 @@ All colors MUST be HSL.
     
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: var(--brand-coral);
+    --ring: var(--brand-yellow);
     
-    --radius: 16px;
+    --radius: 14px;
     
-    /* Playful Gradients */
-    --gradient-hero: radial-gradient(circle at 50% 30%, hsl(var(--brand-yellow) / 0.15) 0%, transparent 60%);
-    --gradient-coral: radial-gradient(circle, hsl(var(--brand-coral) / 0.2) 0%, transparent 70%);
-    --gradient-mint: linear-gradient(135deg, hsl(var(--brand-mint)) 0%, hsl(var(--brand-blue)) 100%);
+    /* Premium Gradients */
+    --gradient-hero: radial-gradient(circle at 50% 30%, hsl(var(--brand-yellow) / 0.22) 0%, transparent 60%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--brand-black)) 0%, hsl(0 0% 10%) 100%);
     
     /* Shadows */
-    --shadow-coral: 0 8px 24px hsl(var(--brand-coral) / 0.25);
-    --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
-    --shadow-button: 0 2px 8px rgba(0, 0, 0, 0.12);
+    --shadow-yellow: 0 8px 22px hsl(var(--brand-yellow) / 0.35);
+    --shadow-card: 0 10px 28px hsl(var(--brand-yellow) / 0.18);
+    --shadow-text: 0 2px 6px rgba(0, 0, 0, 0.6);
     
     /* Typography */
-    --font-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-base: 'Inter', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --text-max-width: 72ch;
     
     /* Timing */

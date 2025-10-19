@@ -34,52 +34,31 @@ const services = [
 ];
 
 const Services = () => {
-  const accentColors = [
-    'brand-coral', 'brand-yellow', 'brand-mint', 
-    'brand-orange', 'brand-blue', 'brand-coral',
-    'brand-yellow', 'brand-mint'
-  ];
-  
   return (
-    <section id="services" className="section-spacing bg-gradient-to-b from-white to-gray-50/30 relative overflow-hidden">
-      {/* Premium decorative background elements */}
-      <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-brand-yellow/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-brand-coral/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1.5s" }}></div>
-      
-      <div className="container-custom relative z-10">
-        <div className="max-w-3xl mb-20">
-          <p className="text-sm font-bold text-brand-coral mb-4 tracking-wider uppercase">Our expertise</p>
-          <h2 className="text-heading text-brand-black mb-6 font-bold">Everything you need to scale</h2>
-          <p className="text-body text-brand-gray leading-relaxed text-lg">
-            From strategy to execution, we build growth systems that turn expertise into predictable revenue.
-          </p>
+    <section id="services" className="section-spacing bg-brand-black">
+      <div className="container-custom">
+        <div className="text-center mb-16">
+          <h2 className="text-heading text-brand-white mb-4">Our expertise</h2>
+          <p className="text-body text-brand-muted">Minimal cards. Crisp copy. Measurable outputs.</p>
         </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-gradient-to-br from-white via-white to-gray-50/50 p-10 rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+              className="card-hover bg-white/[0.03] border border-white/[0.08] rounded-[14px] p-6"
               style={{
                 animationDelay: `${index * 80}ms`,
                 opacity: 0,
                 animation: "fadeInUp 520ms cubic-bezier(0.25, 1, 0.5, 1) forwards"
               }}
             >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-coral/5 via-transparent to-brand-yellow/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-              
-              {/* Colored accent circle */}
-              <div className={`absolute top-8 right-8 w-4 h-4 bg-${accentColors[index]} rounded-full shadow-lg transition-transform duration-300 group-hover:scale-125`}></div>
-              
-              <div className="relative z-10">
-                <h3 className="text-xl font-bold text-brand-black mb-4 pr-8 leading-tight">
-                  {service.title}
-                </h3>
-                <p className="text-brand-gray text-base leading-relaxed">
-                  {service.desc}
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold text-brand-white mb-3">
+                {service.title}
+              </h3>
+              <p className="text-brand-muted text-sm leading-relaxed">
+                {service.desc}
+              </p>
             </div>
           ))}
         </div>
