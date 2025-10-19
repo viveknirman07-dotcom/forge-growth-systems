@@ -24,23 +24,15 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-black">
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-40">
-        <div className="absolute inset-0" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }}></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-white">
+      {/* Playful geometric shapes */}
+      <div className="absolute top-20 right-[15%] w-64 h-64 bg-brand-yellow rounded-full opacity-60 blur-3xl animate-float"></div>
+      <div className="absolute bottom-32 left-[10%] w-80 h-80 bg-brand-coral/40 rounded-full opacity-50 blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+      <div className="absolute top-1/2 right-[25%] w-48 h-48 bg-brand-mint/50 rounded-full opacity-40 blur-2xl animate-float" style={{ animationDelay: "2s" }}></div>
       
-      <div 
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[38vw] h-[38vw] rounded-full blur-[100px] opacity-22"
-        style={{ background: "radial-gradient(circle, hsl(var(--brand-yellow)) 0%, transparent 70%)" }}
-      ></div>
-
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-brand-yellow rounded-full animate-float opacity-40"></div>
-        <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-brand-yellow rounded-full animate-float opacity-30" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-brand-yellow rounded-full animate-float opacity-50" style={{ animationDelay: "2s" }}></div>
-      </div>
+      {/* Decorative shapes */}
+      <div className="absolute top-40 left-[20%] w-32 h-32 border-4 border-brand-coral/30 rounded-full"></div>
+      <div className="absolute bottom-40 right-[15%] w-24 h-24 bg-brand-orange/20" style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}></div>
 
       {/* Content */}
       <div className="container-custom relative z-10 text-center pt-20">
@@ -54,9 +46,8 @@ const Hero = () => {
         />
         
         <h1 
-          className="text-display text-brand-white mb-6 animate-fade-in-up"
+          className="text-display text-brand-black mb-6 animate-fade-in-up"
           style={{ 
-            textShadow: "var(--shadow-text)",
             animationDelay: "100ms",
             opacity: 0,
             animationFillMode: "forwards"
@@ -66,9 +57,8 @@ const Hero = () => {
         </h1>
         
         <p 
-          className="text-subheading text-brand-white/90 mb-12 max-w-3xl mx-auto animate-fade-in-up"
+          className="text-subheading text-brand-gray mb-12 max-w-3xl mx-auto animate-fade-in-up"
           style={{ 
-            textShadow: "var(--shadow-text)",
             animationDelay: "200ms",
             opacity: 0,
             animationFillMode: "forwards"
@@ -88,8 +78,7 @@ const Hero = () => {
           <Button 
             asChild
             size="lg"
-            className="bg-brand-yellow text-brand-black hover:bg-brand-yellow-soft font-semibold px-8 py-6 text-base rounded-[10px] transition-all duration-300 hover:-translate-y-0.5"
-            style={{ boxShadow: "var(--shadow-yellow)" }}
+            className="bg-brand-black text-brand-white hover:bg-brand-black/90 font-semibold px-10 py-6 text-base rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
           >
             <a href="mailto:bitwellforge@gmail.com?subject=Growth%20Audit%20Request">
               Start Your Growth Audit
@@ -100,14 +89,14 @@ const Hero = () => {
             asChild
             variant="outline"
             size="lg"
-            className="bg-transparent text-brand-white border-white/20 hover:bg-white/10 px-8 py-6 text-base rounded-[10px] transition-all duration-300"
+            className="bg-transparent text-brand-black border-brand-black/20 hover:bg-brand-light px-10 py-6 text-base rounded-full transition-all duration-300"
           >
             <a href="#services">Our Services</a>
           </Button>
         </div>
 
         <p 
-          className="text-sm text-brand-muted mt-8 animate-fade-in-up"
+          className="text-sm text-brand-gray mt-8 animate-fade-in-up"
           style={{ 
             animationDelay: "400ms",
             opacity: 0,

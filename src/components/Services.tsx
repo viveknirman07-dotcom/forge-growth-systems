@@ -34,29 +34,38 @@ const services = [
 ];
 
 const Services = () => {
+  const accentColors = [
+    'brand-coral', 'brand-yellow', 'brand-mint', 
+    'brand-orange', 'brand-blue', 'brand-coral',
+    'brand-yellow', 'brand-mint'
+  ];
+  
   return (
-    <section id="services" className="section-spacing bg-brand-black">
+    <section id="services" className="section-spacing bg-brand-light">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-heading text-brand-white mb-4">Our expertise</h2>
-          <p className="text-body text-brand-muted">Minimal cards. Crisp copy. Measurable outputs.</p>
+          <h2 className="text-heading text-brand-black mb-4">Our expertise</h2>
+          <p className="text-body text-brand-gray">Minimal cards. Crisp copy. Measurable outputs.</p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="card-hover bg-white/[0.03] border border-white/[0.08] rounded-[14px] p-6"
+              className="group card-hover bg-brand-white border border-black/5 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
               style={{
                 animationDelay: `${index * 80}ms`,
                 opacity: 0,
                 animation: "fadeInUp 520ms cubic-bezier(0.25, 1, 0.5, 1) forwards"
               }}
             >
-              <h3 className="text-xl font-semibold text-brand-white mb-3">
+              <div className={`w-10 h-10 rounded-full bg-${accentColors[index]}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-4 h-4 rounded-full bg-${accentColors[index]}`}></div>
+              </div>
+              <h3 className="text-xl font-semibold text-brand-black mb-3">
                 {service.title}
               </h3>
-              <p className="text-brand-muted text-sm leading-relaxed">
+              <p className="text-brand-gray text-sm leading-relaxed">
                 {service.desc}
               </p>
             </div>

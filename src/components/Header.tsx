@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-brand-black/95 backdrop-blur-lg shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-brand-white/95 backdrop-blur-lg shadow-md" : "bg-brand-white/80 backdrop-blur-sm"
       }`}
     >
       <div className="container-custom">
@@ -27,23 +27,23 @@ const Header = () => {
               alt="Bitwellforge"
               className="h-7 w-7 transition-transform duration-300 group-hover:rotate-12"
             />
-            <span className="text-brand-white font-semibold text-lg">Bitwellforge</span>
+            <span className="text-brand-black font-semibold text-lg">Bitwellforge</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#whatwedo" className="text-brand-white/80 hover:text-brand-yellow transition-colors text-sm">
+            <a href="#whatwedo" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
               About
             </a>
-            <a href="#services" className="text-brand-white/80 hover:text-brand-yellow transition-colors text-sm">
+            <a href="#services" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
               Services
             </a>
-            <a href="#approach" className="text-brand-white/80 hover:text-brand-yellow transition-colors text-sm">
+            <a href="#approach" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
               Process
             </a>
-            <a href="#testimonials" className="text-brand-white/80 hover:text-brand-yellow transition-colors text-sm">
+            <a href="#testimonials" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
               Testimonials
             </a>
-            <a href="#contact" className="text-brand-white/80 hover:text-brand-yellow transition-colors text-sm">
+            <a href="#contact" className="text-brand-gray hover:text-brand-black transition-colors text-sm font-medium">
               Contact
             </a>
           </nav>
@@ -52,7 +52,7 @@ const Header = () => {
             href="https://www.instagram.com/bitwellforge/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brand-white/80 hover:text-brand-yellow transition-colors"
+            className="text-brand-gray hover:text-brand-black transition-colors"
             aria-label="Instagram"
           >
             <Instagram className="h-5 w-5" />
