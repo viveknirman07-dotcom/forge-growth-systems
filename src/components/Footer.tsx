@@ -4,12 +4,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-white border-t border-border py-12 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-yellow/30 to-transparent"></div>
-      <div className="container-custom relative z-10">
+    <footer className="bg-brand-white border-t border-border py-12">
+      <div className="container-custom">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-semibold text-brand-black mb-4 font-display">Services</h3>
+            <h3 className="font-semibold text-brand-black mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-brand-muted">
               <li><a href="#services" className="hover:text-brand-yellow transition-colors">Strategy</a></li>
               <li><a href="#services" className="hover:text-brand-yellow transition-colors">Sales</a></li>
@@ -19,7 +18,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-brand-black mb-4 font-display">Company</h3>
+            <h3 className="font-semibold text-brand-black mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-brand-muted">
               <li><a href="#whatwedo" className="hover:text-brand-yellow transition-colors">About</a></li>
               <li><a href="#testimonials" className="hover:text-brand-yellow transition-colors">Testimonials</a></li>
@@ -28,7 +27,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-brand-black mb-4 font-display">Connect</h3>
+            <h3 className="font-semibold text-brand-black mb-4">Connect</h3>
             <a 
               href="https://www.instagram.com/bitwellforge/"
               target="_blank"
