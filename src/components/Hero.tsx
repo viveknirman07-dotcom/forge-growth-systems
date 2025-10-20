@@ -62,7 +62,7 @@ const Hero = () => {
             animationFillMode: "forwards"
           }}
         >
-          We forge growth systems.
+          Momentum systems that compound attention into outcomes.
         </h1>
         
         <p 
@@ -74,7 +74,7 @@ const Hero = () => {
             animationFillMode: "forwards"
           }}
         >
-          For professionals, entrepreneurs, and brands who demand clarity, performance, and scale.
+          Designed for professionals, entrepreneurs, and brands who operate with intention
         </p>
 
         <div 
