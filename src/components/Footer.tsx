@@ -1,47 +1,72 @@
-import { Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-brand-white border-t border-border py-12">
-      <div className="container-custom">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+    <footer className="border-t border-[rgba(0,0,0,0.06)] py-20">
+      <div className="container-standard">
+        <div className="grid md:grid-cols-3 gap-12">
+          {/* Logo Column */}
           <div>
-            <h3 className="font-semibold text-brand-black mb-4">Services</h3>
-            <ul className="space-y-2 text-sm text-brand-muted">
-              <li><a href="#services" className="hover:text-brand-yellow transition-colors">Strategy</a></li>
-              <li><a href="#services" className="hover:text-brand-yellow transition-colors">Sales</a></li>
-              <li><a href="#services" className="hover:text-brand-yellow transition-colors">Marketing</a></li>
-              <li><a href="#services" className="hover:text-brand-yellow transition-colors">Automation</a></li>
-            </ul>
+            <img src={logo} alt="BitwellForge" className="h-10 w-10 mb-4" />
+            <p className="text-caption text-muted-foreground">
+              Momentum systems that compound attention into meaningful outcomes.
+            </p>
           </div>
-          
+
+          {/* Navigate Column */}
           <div>
-            <h3 className="font-semibold text-brand-black mb-4">Company</h3>
-            <ul className="space-y-2 text-sm text-brand-muted">
-              <li><a href="#whatwedo" className="hover:text-brand-yellow transition-colors">About</a></li>
-              <li><a href="#testimonials" className="hover:text-brand-yellow transition-colors">Testimonials</a></li>
-              <li><a href="#contact" className="hover:text-brand-yellow transition-colors">Contact</a></li>
-            </ul>
+            <h4 className="text-caption font-medium mb-4">Navigate</h4>
+            <nav className="flex flex-col gap-2">
+              <Link to="/" className="text-caption text-muted-foreground hover:text-foreground hover-underline transition-colors duration-[120ms] w-fit">
+                home
+              </Link>
+              <Link to="/services" className="text-caption text-muted-foreground hover:text-foreground hover-underline transition-colors duration-[120ms] w-fit">
+                services
+              </Link>
+              <Link to="/testimonials" className="text-caption text-muted-foreground hover:text-foreground hover-underline transition-colors duration-[120ms] w-fit">
+                testimonials
+              </Link>
+              <Link to="/about" className="text-caption text-muted-foreground hover:text-foreground hover-underline transition-colors duration-[120ms] w-fit">
+                about
+              </Link>
+              <Link to="/contact" className="text-caption text-muted-foreground hover:text-foreground hover-underline transition-colors duration-[120ms] w-fit">
+                contact
+              </Link>
+            </nav>
           </div>
-          
+
+          {/* Contact Column */}
           <div>
-            <h3 className="font-semibold text-brand-black mb-4">Connect</h3>
+            <h4 className="text-caption font-medium mb-4">Contact</h4>
             <a 
-              href="https://www.instagram.com/bitwellforge/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-brand-muted hover:text-brand-yellow transition-colors"
+              href="mailto:bitwellforge@gmail.com" 
+              className="text-caption text-muted-foreground hover:text-foreground hover-underline transition-colors duration-[120ms] block mb-4 w-fit"
             >
-              <Instagram className="h-4 w-4" />
-              Instagram
+              bitwellforge@gmail.com
             </a>
+            <div className="flex items-center gap-4 mt-4">
+              <a
+                href="https://www.instagram.com/bitwellforge/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-[120ms]"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/bitwellforge/about/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-[120ms]"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
           </div>
-        </div>
-        
-        <div className="pt-8 border-t border-border text-center text-sm text-brand-muted">
-          <p>© {currentYear} Bitwellforge • bitwellforge@gmail.com</p>
         </div>
       </div>
     </footer>
