@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+// QueryClient instance for React Query
 const queryClient = new QueryClient();
 
 const App = () => (
