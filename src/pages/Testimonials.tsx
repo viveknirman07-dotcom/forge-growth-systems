@@ -36,34 +36,33 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
 
-      <div className="section-spacing">
-        <div className="container-standard">
+      <section className="section-spacing">
+        <div className="container-narrow">
           <h1 className="text-display mb-6">Testimonials</h1>
-          <p className="text-body-l text-muted-foreground mb-20 max-w-2xl">
-            What our clients say about working with BitwellForge.
+          <p className="text-body-l text-muted-foreground">
+            What clients say about working with BitwellForge.
           </p>
+        </div>
+      </section>
 
+      <section className="pb-24">
+        <div className="container-standard">
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="border border-border rounded-xl p-8 hover-lift"
-              >
-                <p className="text-body-l mb-6">"{testimonial.quote}"</p>
-                <div className="border-t border-border pt-4">
-                  <p className="text-caption font-medium">{testimonial.author}</p>
-                  <p className="text-micro text-muted-foreground">
-                    {testimonial.role}
-                  </p>
+              <div key={index} className="border border-[hsl(var(--line-hair))] rounded-xl p-8 bg-[hsl(var(--card))] hover-lift">
+                <p className="text-body-l mb-6 leading-relaxed">"{testimonial.quote}"</p>
+                <div>
+                  <p className="text-caption font-normal">{testimonial.author}</p>
+                  <p className="text-micro text-muted-foreground">{testimonial.role}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </div>

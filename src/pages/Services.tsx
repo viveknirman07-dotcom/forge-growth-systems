@@ -113,57 +113,56 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
 
-      <div className="section-spacing">
+      <section className="section-spacing">
         <div className="container-narrow">
           <h1 className="text-display mb-6">Services</h1>
-          <p className="text-body-l text-muted-foreground mb-20">
+          <p className="text-h3 text-muted-foreground font-normal">
             Systems that reduce randomness and increase repeatability.
           </p>
+        </div>
+      </section>
 
-          {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-20">
+      <section className="pb-24">
+        <div className="container-narrow">
+          <div className="space-y-12">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="border border-border rounded-xl p-6 hover-lift"
-              >
-                <h3 className="text-h4 mb-3">{service.name}</h3>
-                <p className="text-body-m text-muted-foreground mb-4">
-                  {service.blurb}
-                </p>
-                <ul className="space-y-2">
-                  {service.bullets.map((bullet, i) => (
-                    <li key={i} className="text-caption text-muted-foreground flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>{bullet}</span>
+              <div key={index} className="border-t border-[hsl(var(--line-hair))] pt-12 first:border-t-0 first:pt-0">
+                <h2 className="text-h3 mb-4">{service.name}</h2>
+                <p className="text-body-l text-muted-foreground mb-6">{service.blurb}</p>
+                <ul className="grid sm:grid-cols-2 gap-3">
+                  {service.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className="text-body-m text-muted-foreground flex items-start">
+                      <span className="text-foreground mr-3">—</span>
+                      {bullet}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-
-          {/* FAQ Section */}
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-h2 mb-8">Frequently asked questions</h2>
-            <Accordion type="single" collapsible className="w-full">
-              {faq.map((item, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">
-                    {item.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {item.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="section-spacing border-t border-[hsl(var(--line-hair))]">
+        <div className="container-narrow">
+          <h2 className="text-h2 mb-12">Frequently asked</h2>
+          <Accordion type="single" collapsible className="w-full">
+            {faq.map((item, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-[hsl(var(--line-hair))]">
+                <AccordionTrigger className="text-h4 text-left hover:no-underline">
+                  {item.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-body-l text-muted-foreground">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
 
       <Footer />
     </div>

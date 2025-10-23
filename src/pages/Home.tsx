@@ -39,26 +39,27 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
 
       {/* Hero Section */}
       <section className="section-spacing">
-        <div className="container-narrow text-center">
-          <h1 className="text-display mb-6 fade-in">
+        <div className="container-narrow">
+          <p className="text-caption text-muted-foreground mb-6 lowercase tracking-wide">bitwellforge</p>
+          <h1 className="text-display mb-6 fade-in text-left">
             We engineer momentum systems that compound attention into meaningful outcomes.
           </h1>
-          <p className="text-body-l text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-body-l text-muted-foreground mb-12 max-w-3xl">
             Growth systems, not noise. Strategy, performance marketing, intelligent outbound and automation that work together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="hover-lift">
+          <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <Button asChild variant="ghost" size="lg" className="hover-underline text-base px-0 h-auto font-normal">
               <Link to="/services">
                 View services
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-[120ms] group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="hover-lift">
+            <Button asChild variant="ghost" size="lg" className="hover-underline text-base px-0 h-auto font-normal text-muted-foreground hover:text-foreground">
               <Link to="/contact">Contact</Link>
             </Button>
           </div>
@@ -66,10 +67,10 @@ const Home = () => {
       </section>
 
       {/* Pillars Section */}
-      <section className="section-spacing bg-secondary/30">
+      <section className="section-spacing border-t border-[hsl(var(--line-hair))]">
         <div className="container-standard">
-          <h2 className="text-h2 text-center mb-16">What we do</h2>
-          <div className="grid md:grid-cols-3 gap-12">
+          <h2 className="text-h2 mb-16">What we do</h2>
+          <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
             {pillars.map((pillar, index) => (
               <div key={index} className="fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                 <h3 className="text-h3 mb-4">{pillar.title}</h3>
@@ -81,28 +82,28 @@ const Home = () => {
       </section>
 
       {/* Testimonials Preview Section */}
-      <section className="section-spacing">
+      <section className="section-spacing border-t border-[hsl(var(--line-hair))]">
         <div className="container-standard">
-          <h2 className="text-h2 text-center mb-16">Selected testimonials</h2>
+          <h2 className="text-h2 mb-16">Selected testimonials</h2>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="border border-border rounded-xl p-6 hover-lift"
+                className="border border-[hsl(var(--line-hair))] rounded-xl p-6 bg-[hsl(var(--card))] hover-lift"
               >
                 <p className="text-body-m mb-6">"{testimonial.quote}"</p>
                 <div>
-                  <p className="text-caption font-medium">{testimonial.author}</p>
+                  <p className="text-caption font-normal">{testimonial.author}</p>
                   <p className="text-micro text-muted-foreground">{testimonial.role}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center">
-            <Button asChild variant="outline" className="hover-lift">
+          <div>
+            <Button asChild variant="ghost" className="hover-underline text-base px-0 h-auto font-normal">
               <Link to="/testimonials">
                 See all testimonials
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-[120ms] group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>
@@ -110,13 +111,13 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-spacing bg-secondary/30">
-        <div className="container-narrow text-center">
+      <section className="section-spacing border-t border-[hsl(var(--line-hair))]">
+        <div className="container-narrow">
           <h2 className="text-h2 mb-8">Ready for calm, compounding growth</h2>
-          <Button asChild size="lg" className="hover-lift">
+          <Button asChild variant="ghost" size="lg" className="hover-underline text-base px-0 h-auto font-normal">
             <Link to="/contact">
               Start a conversation
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-[120ms] group-hover:translate-x-1" />
             </Link>
           </Button>
         </div>

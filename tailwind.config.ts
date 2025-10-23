@@ -50,13 +50,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
         brand: {
-          black: "hsl(var(--brand-black))",
-          surface: "hsl(var(--brand-surface))",
-          white: "hsl(var(--brand-white))",
-          muted: "hsl(var(--brand-muted))",
           yellow: "hsl(var(--brand-yellow))",
-          "yellow-soft": "hsl(var(--brand-yellow-soft))",
         },
       },
       borderRadius: {

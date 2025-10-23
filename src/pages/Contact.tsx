@@ -61,97 +61,53 @@ ${formData.goal}`;
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
 
-      <div className="section-spacing">
+      <section className="section-spacing">
         <div className="container-narrow">
           <h1 className="text-display mb-6">Contact</h1>
-          <p className="text-body-l text-muted-foreground mb-12">
+          <p className="text-body-l text-muted-foreground">
             Start a conversation. No sales pressure. Just clarity.
           </p>
+        </div>
+      </section>
 
-          <form onSubmit={handleSubmit} className="max-w-2xl space-y-6">
+      <section className="pb-24">
+        <div className="container-narrow max-w-[640px]">
+          <form onSubmit={handleSubmit} className="space-y-8">
             <div className="space-y-2">
-              <Label htmlFor="name">Name *</Label>
-              <Input
-                id="name"
-                type="text"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                required
-                className="border-input focus:ring-[rgba(0,0,0,0.12)]"
-              />
+              <Label htmlFor="name" className="text-body-m">Name *</Label>
+              <Input id="name" type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required className="bg-[hsl(var(--card))] border-[hsl(var(--input))] text-foreground placeholder:text-muted-foreground focus-visible:ring-[hsl(var(--focus-ring))] rounded-lg h-12" />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">Work email *</Label>
-              <Input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                required
-                className="border-input focus:ring-[rgba(0,0,0,0.12)]"
-              />
+              <Label htmlFor="email" className="text-body-m">Work email *</Label>
+              <Input id="email" type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} required className="bg-[hsl(var(--card))] border-[hsl(var(--input))] text-foreground placeholder:text-muted-foreground focus-visible:ring-[hsl(var(--focus-ring))] rounded-lg h-12" />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="company">Company or practice</Label>
-              <Input
-                id="company"
-                type="text"
-                value={formData.company}
-                onChange={(e) =>
-                  setFormData({ ...formData, company: e.target.value })
-                }
-                className="border-input focus:ring-[rgba(0,0,0,0.12)]"
-              />
+              <Label htmlFor="company" className="text-body-m">Company or practice</Label>
+              <Input id="company" type="text" value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })} className="bg-[hsl(var(--card))] border-[hsl(var(--input))] text-foreground placeholder:text-muted-foreground focus-visible:ring-[hsl(var(--focus-ring))] rounded-lg h-12" />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="website">Website or LinkedIn</Label>
-              <Input
-                id="website"
-                type="url"
-                value={formData.website}
-                onChange={(e) =>
-                  setFormData({ ...formData, website: e.target.value })
-                }
-                className="border-input focus:ring-[rgba(0,0,0,0.12)]"
-              />
+              <Label htmlFor="website" className="text-body-m">Website or LinkedIn</Label>
+              <Input id="website" type="url" value={formData.website} onChange={(e) => setFormData({ ...formData, website: e.target.value })} className="bg-[hsl(var(--card))] border-[hsl(var(--input))] text-foreground placeholder:text-muted-foreground focus-visible:ring-[hsl(var(--focus-ring))] rounded-lg h-12" />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="goal">What are you trying to achieve *</Label>
-              <Textarea
-                id="goal"
-                value={formData.goal}
-                onChange={(e) =>
-                  setFormData({ ...formData, goal: e.target.value })
-                }
-                required
-                rows={5}
-                className="border-input focus:ring-[rgba(0,0,0,0.12)] resize-none"
-              />
+              <Label htmlFor="goal" className="text-body-m">What are you trying to achieve *</Label>
+              <Textarea id="goal" value={formData.goal} onChange={(e) => setFormData({ ...formData, goal: e.target.value })} required rows={5} className="bg-[hsl(var(--card))] border-[hsl(var(--input))] text-foreground placeholder:text-muted-foreground focus-visible:ring-[hsl(var(--focus-ring))] rounded-lg resize-none" />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="budget">Budget range (optional)</Label>
-              <Select
-                value={formData.budget}
-                onValueChange={(value) =>
-                  setFormData({ ...formData, budget: value })
-                }
-              >
-                <SelectTrigger className="border-input">
+              <Label htmlFor="budget" className="text-body-m">Budget range (optional)</Label>
+              <Select value={formData.budget} onValueChange={(value) => setFormData({ ...formData, budget: value })}>
+                <SelectTrigger className="bg-[hsl(var(--card))] border-[hsl(var(--input))] text-foreground focus:ring-[hsl(var(--focus-ring))] rounded-lg h-12">
                   <SelectValue placeholder="Select a range" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-popover border-[hsl(var(--line-hair))]">
                   <SelectItem value="undecided">Undecided</SelectItem>
                   <SelectItem value="2k-5k">$2k–$5k</SelectItem>
                   <SelectItem value="5k-15k">$5k–$15k</SelectItem>
@@ -161,12 +117,12 @@ ${formData.goal}`;
               </Select>
             </div>
 
-            <Button type="submit" size="lg" className="hover-lift w-full sm:w-auto">
+            <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base font-medium rounded-lg transition-all duration-[120ms]">
               Send
             </Button>
           </form>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </div>
