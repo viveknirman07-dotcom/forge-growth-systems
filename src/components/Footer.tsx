@@ -33,17 +33,45 @@ const Footer = () => {
           </div>
 
           {/* Contact Column */}
-          <div>
-            <h4 className="text-caption font-medium mb-6 text-foreground">Contact</h4>
-            <a href="mailto:v@bitwellforge.com" className="text-caption text-muted-foreground hover:text-foreground hover-underline transition-colors duration-[120ms] block mb-6 w-fit">v@bitwellforge.com</a>
-            <div className="flex items-center gap-4">
-              <a href="https://www.instagram.com/bitwellforge/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-[120ms]" aria-label="Instagram">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://www.linkedin.com/company/bitwellforge/about/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-[120ms]" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5" />
-                <a href="mailto:v@bitwellforge.com" className="hover:opacity-80 transition" aria-label="Email"><Mail className="w-5 h-5" /></a>
-          <div>      
+<div>
+  <h4 className="text-caption font-medium mb-6 text-foreground">Contact</h4>
+
+  {/* visible email text (clickable) */}
+  <a href="mailto:v@bitwellforge.com" className="text-caption text-muted-foreground block mb-6 w-fit">
+    v@bitwellforge.com
+  </a>
+
+  {/* social icons row */}
+  <div className="flex items-center gap-4">
+    <a
+      href="https://www.instagram.com/bitwellforge/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-muted-foreground hover:text-foreground transition"
+      aria-label="Instagram"
+    >
+      <Instagram className="w-5 h-5" />
+    </a>
+
+    <a
+      href="https://www.linkedin.com/company/bitwellforge/about/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-muted-foreground hover:text-foreground transition"
+      aria-label="LinkedIn"
+    >
+      <Linkedin className="w-5 h-5" />
+    </a>
+
+    <a
+      href="mailto:v@bitwellforge.com"
+      className="text-muted-foreground hover:opacity-80 transition"
+      aria-label="Email"
+    >
+      <Mail className="w-5 h-5" />
+    </a>
+  </div>
+</div>
               </a>
             </div>
           </div>
