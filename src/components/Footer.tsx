@@ -43,8 +43,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/bitwellforge/about/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-[120ms]" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
                 <a href="mailto:v@bitwellforge.com" className="hover:opacity-80 transition" aria-label="Email"><Mail className="w-5 h-5" /></a>
-                
-
+          </div>      
               </a>
             </div>
           </div>
