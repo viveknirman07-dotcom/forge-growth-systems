@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/ui/accordion";
 const Services = () => {
   const services = [{
     name: "Business Consulting and Growth Strategy",
@@ -79,15 +79,21 @@ const Services = () => {
         <div className="container-narrow bg-stone-950 rounded">
           <h2 className="text-h2 mb-12">Frequently asked ></h2>
           <Accordion type="single" collapsible className="w-full">
-            {faq.map((item, index) => <AccordionItem key={index} value={`item-${index}`} className="border-[hsl(var(--line-hair))]">
-                <AccordionTrigger className="text-h4 text-left hover:no-underline">
-                  {item.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-body-l text-muted-foreground">
-                  {item.a}
-                </AccordionContent>
-              </AccordionItem>)}
-          </Accordion>
+  {faq.map((item, index) => (
+    <AccordionItem
+      key={index}
+      value={`item-${index}`}
+      className="border-[hsl(var(--line-hair))]"
+    >
+      <AccordionTrigger className="text-h4 text-left hover:no-underline">
+        {item.q}
+      </AccordionTrigger>
+      <AccordionContent className="text-body-1 text-muted-foreground">
+        {item.a}
+      </AccordionContent>
+    </AccordionItem>
+  ))}
+</Accordion>
         </div>
       </section>
 
